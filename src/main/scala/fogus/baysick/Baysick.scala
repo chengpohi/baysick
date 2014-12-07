@@ -267,7 +267,7 @@ import scala.collection.mutable
             binds.set(name, java.lang.Integer.parseInt(entry))
           }
           catch {
-            case _: Throwable => binds.set(name, entry)
+            case _: Exception => binds.set(name, 0)
           }
 
           gotoLine(line + 10)
